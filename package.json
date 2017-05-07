@@ -1,0 +1,20 @@
+{
+  "name": "p-memoize-ttl",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Promise TTL Memoization",
+  "repository": "https://github.com/rromadhoni/p-memoize-ttl",
+  "author": "Rizki Romadhoni",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --timeout 20000 ./src/tests/*-test.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "cache-map": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0"
+  }
+}
