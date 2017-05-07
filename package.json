@@ -1,7 +1,7 @@
 {
   "name": "p-memoize-ttl",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "description": "Promise TTL Memoization",
   "repository": "https://github.com/rromadhoni/p-memoize-ttl",
