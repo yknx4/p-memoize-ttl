@@ -1,7 +1,7 @@
 const CacheMap = require('cache-map').default
 const _promise = require('bluebird')
 const safeStringify = require('fast-safe-stringify')
-const debug = require('debug')('memoize-p')
+const debug = require('debug')('memoizep')
 
 const PromiseLib = Promise === undefined ? _promise : Promise
 
@@ -9,6 +9,7 @@ const memoizePromise = (fn, options) => {
   const cacheMap = new CacheMap(options.ttl, options.evictInterval)
   const memoizedPromise = (...args) => {
     const cacheKey = safeStringify(args);
+    debug(cacheKey);
     const cachedResult = cacheMap.get(cacheKey);
     if (cachedResult) {
       debug('hit with ' + cacheKey);
