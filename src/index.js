@@ -9,7 +9,7 @@ const memoizePromise = (fn, options) => {
   const cacheMap = new CacheMap(options.ttl, options.evictInterval)
   const memoizedPromise = (...args) => {
     const hasher = new XXHash(0xcafebabe);
-    hasher.update(safeStringify(args));
+    hasher.update(Buffer.from(safeStringify(args), 'utf8'));
     const cacheKey = hasher.digest();
     const cachedResult = cacheMap.get(cacheKey)
     if (cachedResult) {
