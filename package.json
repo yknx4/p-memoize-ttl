@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "cache-map": "^1.1.0"
+    "cache-map": "^1.1.0",
+    "fast-safe-stringify": "^1.2.0",
+    "xxhash": "^0.2.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
